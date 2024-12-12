@@ -1,31 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 20:25:05 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/12 16:59:50 by maborges         ###   ########.fr       */
+/*   Created: 2024/12/12 16:57:40 by maborges          #+#    #+#             */
+/*   Updated: 2024/12/12 17:33:57 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr(char *s)
-{
-	int	i;
-	int	count;
 
-	i = 0;
-	count = 0;
-	if (!s)
-		return ;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-		count++;
-	}
-	return (count);
-}

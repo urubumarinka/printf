@@ -6,9 +6,11 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:09:51 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/11 17:29:22 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/12 16:59:36 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_putchar(char c)
 {
