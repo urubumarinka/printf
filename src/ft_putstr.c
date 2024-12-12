@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 15:25:03 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/12 15:07:33 by maborges         ###   ########.fr       */
+/*   Created: 2024/11/22 20:25:05 by maborges          #+#    #+#             */
+/*   Updated: 2024/12/11 17:28:49 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
+int	ft_putstr(char *s)
+{
+	int	i;
+	int	count;
 
-# include <stdarg.h>
-# include "../libft/libft.h"
-
-int			ft_putchar(char c);
-int			ft_putnbr(int n);
-int			ft_putstr(char *s);
-
-#endif
+	i = 0;
+	count = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+		count++;
+	}
+	return (count);
+}

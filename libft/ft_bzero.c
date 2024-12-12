@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 15:25:03 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/12 15:07:33 by maborges         ###   ########.fr       */
+/*   Created: 2024/11/12 23:24:39 by maborges          #+#    #+#             */
+/*   Updated: 2024/11/28 17:39:10 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
+void	ft_bzero(void *s, size_t n)
+{
+	char	*str;
+	size_t	i;
 
-# include <stdarg.h>
-# include "../libft/libft.h"
-
-int			ft_putchar(char c);
-int			ft_putnbr(int n);
-int			ft_putstr(char *s);
-
-#endif
+	str = (char *)s;
+	i = 0;
+	if (!n)
+		return ;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
+}

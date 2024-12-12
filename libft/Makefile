@@ -5,39 +5,34 @@
 #                                                     +:+ +:+         +:+      #
 #    By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/11 11:01:03 by maborges          #+#    #+#              #
-#    Updated: 2024/12/12 15:07:36 by maborges         ###   ########.fr        #
+#    Created: 2024/11/29 16:23:58 by maborges          #+#    #+#              #
+#    Updated: 2024/12/03 15:54:11 by maborges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# My program name and libft var
-NAME = libftprintf.a
-LIBFT_DIR = ../libft
-LIBFT = $(LIBFT_DIR)/libft.a
+# My program name
+NAME = libft.a
 
 #Compiler and flags
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 #Source files
-SRCS =	ft_printf.c \
-		ft_putchar.C \
-		ft_putnbr.c \
-		ft_putstr.c \
+SRCS =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+	ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
+	ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+	ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
+	ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
+	ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
 
 # Object files
 OBJS = $(SRCS:.c=.o)
 
 #Default rule to compile the program
-all: $(LIBFT) $(NAME)
-
-$(LIBFT):
-	$(MAKE) -C $(LIBFT_DIR)
+all: $(NAME)
 
 #Rule to link the object files into executable, create static lib and update the index of static lib
 $(NAME): $(OBJS)
-	$(MAKE) -C ./libft
-	cp libft/libft.a $(NAME)
 	ar rcs $(NAME) $(OBJS)
 
 #Rule to compile the source files into object files
@@ -50,16 +45,14 @@ main: $(NAME)
 
 #Clean rule to remove object files
 clean:
-	$(MAKE) clean -C ./libft
 	rm -f $(OBJS)
 
 #Fclean rule to remove object files and executable
 fclean: clean
-	$(MAKE) fclean -C $(LIBFT_DIR)
 	rm -f $(NAME)
 
 #Rule to clean and recompile everything
 re: fclean all
 
 #Phony targets to prevent conflicts with files
-.PHONY: all clean fclean re
+.PHONY: clean fclean re

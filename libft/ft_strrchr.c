@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 15:25:03 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/12 15:07:33 by maborges         ###   ########.fr       */
+/*   Created: 2024/11/17 12:19:47 by maborges          #+#    #+#             */
+/*   Updated: 2024/11/19 11:19:49 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
+char	*ft_strrchr(const char *s, int c)
+{
+	size_t	i;
 
-# include <stdarg.h>
-# include "../libft/libft.h"
-
-int			ft_putchar(char c);
-int			ft_putnbr(int n);
-int			ft_putstr(char *s);
-
-#endif
+	i = ft_strlen(s);
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	while (i > 0)
+	{
+		if (s[i - 1] == (char)c)
+			return ((char *)&s[i - 1]);
+		i--;
+	}
+	return (NULL);
+}
