@@ -6,11 +6,11 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:36:04 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/15 02:16:51 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/16 00:06:09 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {

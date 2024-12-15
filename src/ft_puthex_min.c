@@ -6,11 +6,11 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:05:22 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/14 22:17:03 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/16 00:06:02 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_puthex_min(unsigned long hex)
 {

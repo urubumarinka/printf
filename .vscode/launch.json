@@ -2,6 +2,23 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug ft_printf",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/main",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "miDebuggerPath": "/usr/bin/lldb",
+      "preLaunchTask": "build",
+      "logging": {
+        "moduleLoad": false
+      }
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "lldb",
       "request": "launch",

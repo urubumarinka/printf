@@ -6,11 +6,11 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:09:51 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/15 02:11:37 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/16 00:05:56 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

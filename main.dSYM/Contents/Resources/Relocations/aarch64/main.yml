@@ -1,0 +1,24 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     main
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000035A8, symSize: 0x8C }
+  - { offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000035A8, symSize: 0x8C }
+  - { offset: 0x87, size: 0x8, addend: 0x0, symName: _ft_printf, symObjAddr: 0x0, symBinAddr: 0x100003634, symSize: 0x128 }
+  - { offset: 0x94, size: 0x8, addend: 0x0, symName: _ft_printf, symObjAddr: 0x0, symBinAddr: 0x100003634, symSize: 0x128 }
+  - { offset: 0xE7, size: 0x8, addend: 0x0, symName: _ft_validspec, symObjAddr: 0x128, symBinAddr: 0x10000375C, symSize: 0x10C }
+  - { offset: 0x10F, size: 0x8, addend: 0x0, symName: _ft_check, symObjAddr: 0x234, symBinAddr: 0x100003868, symSize: 0x208 }
+  - { offset: 0x1B5, size: 0x8, addend: 0x0, symName: _ft_putchar, symObjAddr: 0x0, symBinAddr: 0x100003A70, symSize: 0x2C }
+  - { offset: 0x1C2, size: 0x8, addend: 0x0, symName: _ft_putchar, symObjAddr: 0x0, symBinAddr: 0x100003A70, symSize: 0x2C }
+  - { offset: 0x21E, size: 0x8, addend: 0x0, symName: _ft_putnbr, symObjAddr: 0x0, symBinAddr: 0x100003A9C, symSize: 0x130 }
+  - { offset: 0x22B, size: 0x8, addend: 0x0, symName: _ft_putnbr, symObjAddr: 0x0, symBinAddr: 0x100003A9C, symSize: 0x130 }
+  - { offset: 0x2A3, size: 0x8, addend: 0x0, symName: _ft_putstr, symObjAddr: 0x0, symBinAddr: 0x100003BCC, symSize: 0xC0 }
+  - { offset: 0x2BE, size: 0x8, addend: 0x0, symName: _ft_putstr, symObjAddr: 0x0, symBinAddr: 0x100003BCC, symSize: 0xC0 }
+  - { offset: 0x334, size: 0x8, addend: 0x0, symName: _ft_putadress, symObjAddr: 0x0, symBinAddr: 0x100003C8C, symSize: 0x80 }
+  - { offset: 0x357, size: 0x8, addend: 0x0, symName: _ft_putadress, symObjAddr: 0x0, symBinAddr: 0x100003C8C, symSize: 0x80 }
+  - { offset: 0x38D, size: 0x8, addend: 0x0, symName: _puthex, symObjAddr: 0x80, symBinAddr: 0x100003D0C, symSize: 0xB4 }
+  - { offset: 0x403, size: 0x8, addend: 0x0, symName: _ft_puthex, symObjAddr: 0x0, symBinAddr: 0x100003DC0, symSize: 0xAC }
+  - { offset: 0x41E, size: 0x8, addend: 0x0, symName: _ft_puthex, symObjAddr: 0x0, symBinAddr: 0x100003DC0, symSize: 0xAC }
+  - { offset: 0x49B, size: 0x8, addend: 0x0, symName: _ft_puthex_min, symObjAddr: 0x0, symBinAddr: 0x100003E6C, symSize: 0xAC }
+  - { offset: 0x4B6, size: 0x8, addend: 0x0, symName: _ft_puthex_min, symObjAddr: 0x0, symBinAddr: 0x100003E6C, symSize: 0xAC }
+...

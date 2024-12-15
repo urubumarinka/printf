@@ -6,11 +6,11 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:05:06 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/14 22:16:54 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/16 00:01:23 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 static int	puthex(unsigned long long nbr)
 {

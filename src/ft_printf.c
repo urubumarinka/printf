@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:50:45 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/15 02:20:32 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/16 00:45:15 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_check(va_list args, char c)
 	else if (c == 'X')
 		count = ft_puthex(va_arg(args, unsigned long));
 	else if (c == 'p')
-		count += ft_putadress(va_arg(args, void *));
+		count = ft_putadress(va_arg(args, void *));
 	else if (c == 'u')
 		count = ft_putnbr(va_arg(args, unsigned int));
 	else if (c == '%')
@@ -61,9 +61,10 @@ int	ft_printf(const char *format, ...)
 				count += ft_check(args, format[++i]);
 		}
 		else
-			count += ft_putchar(format[i]);
+			count += write(1, &format[i], 1);
 		i++;
 	}
 	va_end(args);
 	return (count);
 }
+
