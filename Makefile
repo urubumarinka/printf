@@ -6,13 +6,13 @@
 #    By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/11 11:01:03 by maborges          #+#    #+#              #
-#    Updated: 2024/12/12 15:07:36 by maborges         ###   ########.fr        #
+#    Updated: 2024/12/15 02:09:30 by maborges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # My program name and libft var
 NAME = libftprintf.a
-LIBFT_DIR = ../libft
+LIBFT_DIR = libft/
 LIBFT = $(LIBFT_DIR)/libft.a
 
 #Compiler and flags
@@ -21,9 +21,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 #Source files
 SRCS =	ft_printf.c \
-		ft_putchar.C \
-		ft_putnbr.c \
-		ft_putstr.c \
+		src/ft_putchar.c \
+		src/ft_putnbr.c \
+		src/ft_putstr.c \
+		src/ft_putadress.c \
+		src/ft_puthex.c \
+		src/ft_puthex_min.c \
 
 # Object files
 OBJS = $(SRCS:.c=.o)
@@ -36,7 +39,6 @@ $(LIBFT):
 
 #Rule to link the object files into executable, create static lib and update the index of static lib
 $(NAME): $(OBJS)
-	$(MAKE) -C ./libft
 	cp libft/libft.a $(NAME)
 	ar rcs $(NAME) $(OBJS)
 
@@ -45,7 +47,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 #For make main
-main: $(NAME)
+main: $(NAME) main.c
 	$(CC) $(CFLAGS) main.c $(NAME) -o main
 
 #Clean rule to remove object files

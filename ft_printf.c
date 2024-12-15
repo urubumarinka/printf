@@ -6,14 +6,19 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:50:45 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/12 17:33:51 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/15 02:20:32 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_check(va_list args, char c)
+static int	ft_validspec(char c)
+{
+	return (c == 'd' || c == 'i' || c == 'c' || c == 's'
+		|| c == 'x' || c == 'X' || c == 'p' || c == 'u' || c == '%');
+}
+
+static int	ft_check(va_list args, char c)
 {
 	int	count;
 
@@ -25,18 +30,15 @@ int	ft_check(va_list args, char c)
 	else if (c == 's')
 		count = ft_putstr(va_arg(args, char *));
 	else if (c == 'x')
-		count = ft_puthex(va_arg(args, unsigned int));
+		count = ft_puthex_min(va_arg(args, unsigned long));
 	else if (c == 'X')
-		count = ft_puthex_m(va_arg(args, unsigned int));
+		count = ft_puthex(va_arg(args, unsigned long));
 	else if (c == 'p')
-	{
-		count = ft_putstr(("0x"));
-		count += ft_putadress(va_arg(args, unsigned long long));
-	}
+		count += ft_putadress(va_arg(args, void *));
 	else if (c == 'u')
 		count = ft_putnbr(va_arg(args, unsigned int));
 	else if (c == '%')
-		return (ft_putchar('%'));
+		count = ft_putchar('%');
 	return (count);
 }
 
@@ -46,6 +48,8 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		count;
 
+	if (!format)
+		return (0);
 	va_start(args, format);
 	i = 0;
 	count = 0;
@@ -53,7 +57,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] != '\0')
+			if (ft_validspec(format[i + 1]))
 				count += ft_check(args, format[++i]);
 		}
 		else
