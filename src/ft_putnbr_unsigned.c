@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 15:25:03 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/16 18:33:12 by maborges         ###   ########.fr       */
+/*   Created: 2024/11/22 20:36:04 by maborges          #+#    #+#             */
+/*   Updated: 2024/12/16 18:42:50 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include "../libft/libft.h"
-# include <stdio.h> // lembrar de tirar
+int	ft_putnbr_unsigned(unsigned int n)
+{
+	int	count;
 
-int			ft_printf(const char *__format, ...);
-int			ft_putnbr(int n);
-int			ft_putnbr_unsigned(unsigned int n);
-int			ft_putstr(char *s);
-int			ft_putadress(void *pointer);
-int			ft_puthex_min(unsigned long hex);
-int			ft_puthex(unsigned long hex);
-
-#endif
+	count = 0;
+	if (n >= 10)
+		ft_putnbr_unsigned(n / 10);
+	count += ft_putchar_fd((n % 10) + '0', 1);
+	return (count);
+}

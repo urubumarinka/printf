@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:50:45 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/16 00:45:15 by maborges         ###   ########.fr       */
+/*   Updated: 2024/12/16 18:40:55 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_check(va_list args, char c)
 	if (c == 'd' || c == 'i')
 		count = ft_putnbr(va_arg(args, int));
 	else if (c == 'c')
-		count = ft_putchar(va_arg(args, int));
+		count = ft_putchar_fd(va_arg(args, int), 1);
 	else if (c == 's')
 		count = ft_putstr(va_arg(args, char *));
 	else if (c == 'x')
@@ -36,9 +36,9 @@ static int	ft_check(va_list args, char c)
 	else if (c == 'p')
 		count = ft_putadress(va_arg(args, void *));
 	else if (c == 'u')
-		count = ft_putnbr(va_arg(args, unsigned int));
+		count = ft_putnbr_unsigned(va_arg(args, unsigned int));
 	else if (c == '%')
-		count = ft_putchar('%');
+		count = ft_putchar_fd('%', 1);
 	return (count);
 }
 
@@ -61,10 +61,9 @@ int	ft_printf(const char *format, ...)
 				count += ft_check(args, format[++i]);
 		}
 		else
-			count += write(1, &format[i], 1);
+			count += ft_putchar_fd(format[i], 1);
 		i++;
 	}
 	va_end(args);
 	return (count);
 }
-

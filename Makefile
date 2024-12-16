@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/11 11:01:03 by maborges          #+#    #+#              #
-#    Updated: 2024/12/16 00:43:20 by maborges         ###   ########.fr        #
+#    Updated: 2024/12/16 18:33:05 by maborges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,8 @@ CFLAGS = -Wall -Wextra -Werror -Iinc -Isrc -g
 
 # Source files
 SRCS =	src/ft_printf.c \
-		src/ft_putchar.c \
 		src/ft_putnbr.c \
+		src/ft_putnbr_unsigned.c \
 		src/ft_putstr.c \
 		src/ft_putadress.c \
 		src/ft_puthex.c \
@@ -40,7 +40,7 @@ $(LIBFT):
 
 # Rule to link the object files into static lib
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	cp $(LIBFT) $(NAME)
 	ar rcs $(NAME) $(OBJS)
 
 # Rule to compile the source files into object files

@@ -11,8 +11,8 @@
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": true,
-      "MIMode": "lldb",
-      "miDebuggerPath": "/usr/bin/lldb",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
       "preLaunchTask": "build",
       "logging": {
         "moduleLoad": false
@@ -20,7 +20,7 @@
     },
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "type": "gdb",
       "request": "launch",
       "args": [],
       "cwd": "/Users/urubu/42/printf",
