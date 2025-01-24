@@ -6,13 +6,13 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:57:40 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/16 18:43:25 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:45:30 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned long hex)
+int	ft_puthex(unsigned int hex)
 {
 	char	*hexdigits;
 	int		count;

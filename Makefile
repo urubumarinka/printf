@@ -6,7 +6,7 @@
 #    By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/11 11:01:03 by maborges          #+#    #+#              #
-#    Updated: 2024/12/16 18:33:05 by maborges         ###   ########.fr        #
+#    Updated: 2025/01/24 15:20:28 by maborges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS =	src/ft_printf.c \
 		src/ft_putstr.c \
 		src/ft_putadress.c \
 		src/ft_puthex.c \
+		src/ft_putchar.c \
 		src/ft_puthex_min.c
 
 # Object files (with paths accounted for)

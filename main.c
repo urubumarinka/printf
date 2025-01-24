@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:21:02 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/16 18:44:49 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:27:29 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	int	output = -1;
+	/* int	output = -1;
 	ft_printf("Hello, World!\n");
 	ft_printf("Number: %d\n", 42);
 	ft_printf("Char: %c\n", 'A');
@@ -40,7 +40,9 @@ int	main(void)
 
 	printf("Hex (lowercase): %x\n", 255);
 	printf("Hex (uppercase): %X\n", 255);
-	printf("Pointer: %p\n", &output);
+	printf("Pointer: %p\n", &output); */
+
+	ft_printf("some thing %x \n", 0);
 
 
 

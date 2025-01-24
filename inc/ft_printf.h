@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:25:03 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/16 18:33:12 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:45:53 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include "../libft/libft.h"
+# include <unistd.h>
 # include <stdio.h> // lembrar de tirar
 
 int			ft_printf(const char *__format, ...);
@@ -22,7 +23,8 @@ int			ft_putnbr(int n);
 int			ft_putnbr_unsigned(unsigned int n);
 int			ft_putstr(char *s);
 int			ft_putadress(void *pointer);
-int			ft_puthex_min(unsigned long hex);
-int			ft_puthex(unsigned long hex);
+int			ft_puthex_min(unsigned int hex);
+int			ft_puthex(unsigned int hex);
+int			ft_putchar(char c);
 
 #endif
