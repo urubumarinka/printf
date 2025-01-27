@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:21:02 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/27 17:24:41 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/27 17:41:57 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(void)
 	ft_printf("%x\n", 0);
 	ft_printf("%x\n", 4294967295U);
 	ft_printf("%x\n", 10000);
+	ft_printf(" %p %p ", 0, 0);
 
 	printf("===FT_PRINTF TEST RESULT===\n");
 	printf("some thing %x \n", 0);
@@ -63,6 +64,7 @@ int	main(void)
 	printf("%x\n", 0);
 	printf("%x\n", 4294967295U);
 	printf("%x\n", 10000);
+	printf(" %p %p ", 0, 0);
 
 
 

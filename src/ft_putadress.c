@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:05:06 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/27 14:38:35 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/27 17:46:23 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_putadress(void *pointer)
 
 	count = 0;
 	if (pointer == NULL)
-		return (write(1, "0x0", 3));
+		return (write(1, "(nil)", 5));
 	ret = write(1, "0x", 2);
 	if (ret == -1)
 		return (-1);
