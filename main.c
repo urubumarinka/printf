@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:21:02 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/27 13:12:02 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/27 17:24:41 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,26 @@ int	main(void)
 
 	printf("===FT_PRINTF TEST RESULT===\n");
 	ft_printf("some thing %x \n", 0);
-	ft_printf(" %p %p \n", 0, 0);
+	//ft_printf(" %p %p \n", 0, 0);
 	ft_printf("%p\n", NULL);
-	ft_printf("%pp%p%p\n", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
+	//ft_printf("%pp%p%p\n", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
 	ft_printf("\001\002\007\v\010\f\r\n");
-
+	ft_printf("%x\n", -10);
+	ft_printf("%x\n", 0);
+	ft_printf("%x\n", 4294967295U);
+	ft_printf("%x\n", 10000);
 
 	printf("===FT_PRINTF TEST RESULT===\n");
 	printf("some thing %x \n", 0);
-	printf(" %p %p \n", 0, 0);
+	//printf(" %p %p \n", 0, 0);
 	printf("%p\n", NULL);
-	printf("%pp%p%p\n", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
+	//printf("%pp%p%p\n", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
 	printf("\001\002\007\v\010\f\r\n");
+	printf("%x\n", -10);
+	printf("%x\n", 0);
+	printf("%x\n", 4294967295U);
+	printf("%x\n", 10000);
+
 
 
 

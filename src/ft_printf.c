@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:50:45 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/24 17:08:40 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/27 14:38:53 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,23 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 	int		i;
 	int		count;
+	int		re;
 
 	if (!format)
 		return (0);
 	va_start(args, format);
 	i = 0;
 	count = 0;
+	re = 0;
 	while (format[i])
 	{
 		if (format[i] == '%')
-			count += ft_check(&args, format[++i]);
+			re = ft_check(&args, format[++i]);
 		else
-			count += ft_putchar(format[i]);
+			re = ft_putchar(format[i]);
+		if (re == -1)
+			return (-1);
+		count += re;
 		i++;
 	}
 	va_end(args);
