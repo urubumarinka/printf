@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:25:03 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/24 15:45:53 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 17:12:24 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdio.h> // lembrar de tirar
 

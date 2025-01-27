@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:57:40 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/24 15:45:30 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 17:09:40 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_puthex(unsigned int hex)
 	hexdigits = "0123456789ABCDEF";
 	if (hex < 16)
 	{
-		count += ft_putchar_fd(hexdigits[hex], 1);
+		count += ft_putchar(hexdigits[hex]);
 	}
 	else
 	{

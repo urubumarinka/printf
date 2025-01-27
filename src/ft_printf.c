@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:50:45 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/24 15:16:22 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 17:08:40 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_check(va_list *args, char c)
 	if (c == 'd' || c == 'i')
 		count = ft_putnbr(va_arg(*args, int));
 	else if (c == 'c')
-		count = ft_putchar_fd(va_arg(*args, int), 1);
+		count = ft_putchar(va_arg(*args, int));
 	else if (c == 's')
 		count = ft_putstr(va_arg(*args, char *));
 	else if (c == 'x')
@@ -38,7 +38,7 @@ static int	ft_check(va_list *args, char c)
 	else if (c == 'u')
 		count = ft_putnbr_unsigned(va_arg(*args, unsigned int));
 	else if (c == '%')
-		count = ft_putchar_fd('%', 1);
+		count = ft_putchar('%');
 	else
 		count += write(1, &c, 1);
 	return (count);
@@ -60,7 +60,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 			count += ft_check(&args, format[++i]);
 		else
-			count += ft_putchar_fd(format[i], 1);
+			count += ft_putchar(format[i]);
 		i++;
 	}
 	va_end(args);

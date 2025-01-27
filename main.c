@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:21:02 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/24 15:27:29 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 16:10:04 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ int	main(void)
 	printf("Hex (lowercase): %x\n", 255);
 	printf("Hex (uppercase): %X\n", 255);
 	printf("Pointer: %p\n", &output); */
-
-	ft_printf("some thing %x \n", 0);
-
 
 
 	return (0);

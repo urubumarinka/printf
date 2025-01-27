@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:36:04 by maborges          #+#    #+#             */
-/*   Updated: 2024/12/17 16:35:57 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/24 17:10:20 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	check_neg(long *nb, int *count)
 {
 	int	re;
 
-	re = ft_putchar_fd('-', 1);
+	re = ft_putchar('-');
 	if (re == -1)
 		return (-1);
 	*count += re;
@@ -44,7 +44,7 @@ int	ft_putnbr(int n)
 			return (-1);
 		count += re;
 	}
-	re = ft_putchar_fd((nb % 10) + '0', 1);
+	re = ft_putchar((nb % 10) + '0');
 	if (re == -1)
 		return (-1);
 	count += re;

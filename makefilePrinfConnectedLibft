@@ -1,21 +1,12 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/11 11:01:03 by maborges          #+#    #+#              #
-#    Updated: 2025/01/24 17:07:17 by maborges         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 # My program name and libft var
 NAME = libftprintf.a
+LIBFT_DIR = libft
+LIBFT = $(LIBFT_DIR)/libft.a
 
 # Compiler and flags
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iinc -Isrc
+CFLAGS = -Wall -Wextra -Werror -Iinc -Isrc -g
 
 # Source files
 SRCS =	src/ft_printf.c \
@@ -31,10 +22,15 @@ SRCS =	src/ft_printf.c \
 OBJS = $(SRCS:%.c=%.o)
 
 # Default rule to compile the program
-all: $(NAME)
+all: $(LIBFT) $(NAME)
+
+# Build libft
+$(LIBFT):
+	$(MAKE) -C $(LIBFT_DIR)
 
 # Rule to link the object files into static lib
 $(NAME): $(OBJS)
+	cp $(LIBFT) $(NAME)
 	ar rcs $(NAME) $(OBJS)
 
 # Rule to compile the source files into object files
@@ -48,10 +44,12 @@ main: $(NAME) main.c
 
 # Clean rule to remove object files
 clean:
+	$(MAKE) clean -C $(LIBFT_DIR)
 	rm -f $(OBJS)
 
 # Fclean rule to remove object files and executable
 fclean: clean
+	$(MAKE) fclean -C $(LIBFT_DIR)
 	rm -f $(NAME) main
 
 # Rule to clean and recompile everything
@@ -59,3 +57,4 @@ re: fclean all
 
 # Phony targets to prevent conflicts with files
 .PHONY: all clean fclean re
+
