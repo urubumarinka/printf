@@ -6,7 +6,7 @@
 /*   By: maborges <maborges@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 20:21:02 by maborges          #+#    #+#             */
-/*   Updated: 2025/01/24 16:10:04 by maborges         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:12:02 by maborges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,22 @@ int	main(void)
 	printf("Hex (lowercase): %x\n", 255);
 	printf("Hex (uppercase): %X\n", 255);
 	printf("Pointer: %p\n", &output); */
+
+	printf("===FT_PRINTF TEST RESULT===\n");
+	ft_printf("some thing %x \n", 0);
+	ft_printf(" %p %p \n", 0, 0);
+	ft_printf("%p\n", NULL);
+	ft_printf("%pp%p%p\n", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
+	ft_printf("\001\002\007\v\010\f\r\n");
+
+
+	printf("===FT_PRINTF TEST RESULT===\n");
+	printf("some thing %x \n", 0);
+	printf(" %p %p \n", 0, 0);
+	printf("%p\n", NULL);
+	printf("%pp%p%p\n", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
+	printf("\001\002\007\v\010\f\r\n");
+
 
 
 	return (0);
